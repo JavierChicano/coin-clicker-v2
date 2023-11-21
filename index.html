@@ -32,114 +32,13 @@
         </div>
     </header>
     <main>
-        <section class="displayMonedas">
-            <img src="img/nivel 1/coin1.png">
-            <article id="informacionMoneda1">
-                <p>Monedas/s: </p>
-                <p>Tier: </p>
-            </article>
-        </section>
-        <section class="displayMejoras">
-            <h2>¡Mejora la produccion de monedas!</h2>
-            <aside>
-                <div>
-                    <h1>Arma</h1>
-                    <section class="informacion">
-                        <p id="levelCountArma">info nv</p>
-                        <div>
-                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
-                            <span id="costeArma">coste</span>
-                        </div>
-                    </section>
-                </div>
-                <div>
-                    <h1>Soldado</h1>
-                    <section class="informacion">
-                        <p id="levelCountSoldado">info nv</p>
-                        <div>
-                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
-                            <span id="costeSoldado">coste</span>
-                        </div>
-                    </section>
-                </div>
-                <div>
-                    <h1>Sargento</h1>
-                    <section class="informacion">
-                        <p id="levelCountSargento">info nv</p>
-                        <div>
-                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
-                            <span id="costeSargento">coste</span>
-                        </div>
-                    </section>
-                </div>
-                <div>
-                    <h1>Capitán</h1>
-                    <section class="informacion">
-                        <p id="levelCountCapitan">info nv</p>
-                        <div>
-                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
-                            <span id="costeCapitan">coste</span>
-                        </div>
-                    </section>
-                </div>
-            </aside>
-        </section>
-        <section class="displayTienda">
-            <h3>Mejora la eficacia de tu ejercito en la tienda.</h3>
-            <aside>
-                <div>
-                    <h1>Mejora 1</h1>
-                    <section class="informacion">
-                        <p id="levelCountCapitan">info nv</p>
-                        <div>
-                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
-                            <span id="costeCapitan">coste</span>
-                        </div>
-                    </section>
-                </div>
-                <div>
-                    <h1>PowerUps</h1>
-                    <section class="informacion">
-                        <p id="levelCountCapitan">info nv</p>
-                        <div>
-                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
-                            <span id="costeCapitan">coste</span>
-                        </div>
-                    </section>
-                </div>
-                <div>
-                    <h1>Talentos</h1>
-                    <section class="informacion">
-                        <p id="levelCountCapitan">info nv</p>
-                        <div>
-                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
-                            <span id="costeCapitan">coste</span>
-                        </div>
-                    </section>
-                </div>
-                <div>
-                    <h1>Reliquias</h1>
-                    <section class="informacion">
-                        <p id="levelCountCapitan">info nv</p>
-                        <div>
-                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
-                            <span id="costeCapitan">coste</span>
-                        </div>
-                    </section>
-                </div>
-            </aside>
-        </section>
-        
-        <!-- Segunda seccion de la pagina -->
-
-
-        <div id="mostrarCandado">
+        <!-- <div id="mostrarCandado">
             <img src="img/candado.png" id="imgCandado"></img>
             <section id="cajaCandado">
                 <img src="img/nivel 1/coin1.png" id="monedaClick3" alt="nivel 1/coin1.png"></img>
                 <span id="costeCandado"></span>
             </section>  
-        </div>
+        </div> -->
         <section class="displayMonedas">
             <img src="img/nivel 1/coin1.png">
             <article id="informacionMoneda1">
@@ -150,7 +49,7 @@
         <section class="displayMejoras">
             <h2>¡Mejora la produccion de monedas!</h2>
             <aside>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Arma</h1>
                     <section class="informacion">
                         <p id="levelCountArma">info nv</p>
@@ -160,7 +59,7 @@
                         </div>
                     </section>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Soldado</h1>
                     <section class="informacion">
                         <p id="levelCountSoldado">info nv</p>
@@ -169,8 +68,117 @@
                             <span id="costeSoldado">coste</span>
                         </div>
                     </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +1</div>
+                </div>
+                <div class="contenedorMejoras">
+                    <h1>Sargento</h1>
+                    <section class="informacion">
+                        <p id="levelCountSargento">info nv</p>
+                        <div>
+                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
+                            <span id="costeSargento">coste</span>
+                        </div>
+                    </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +3</div>
+
+                </div>
+                <div class="contenedorMejoras">
+                    <h1>Capitán</h1>
+                    <section class="informacion">
+                        <p id="levelCountCapitan">info nv</p>
+                        <div>
+                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
+                            <span id="costeCapitan">coste</span>
+                        </div>
+                    </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +5</div>
+                </div>
+            </aside>
+        </section>
+        <section class="displayTienda">
+            <h3>Mejora la eficacia de tu ejercito en la tienda.</h3>
+            <aside>
+                <div>
+                    <h1>Mejora 1</h1>
+                    <section class="informacion">
+                        <p id="levelCountCapitan">info nv</p>
+                        <div>
+                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
+                            <span id="costeCapitan">coste</span>
+                        </div>
+                    </section>
                 </div>
                 <div>
+                    <h1>PowerUps</h1>
+                    <section class="informacion">
+                        <p id="levelCountCapitan">info nv</p>
+                        <div>
+                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
+                            <span id="costeCapitan">coste</span>
+                        </div>
+                    </section>
+                </div>
+                <div>
+                    <h1>Talentos</h1>
+                    <section class="informacion">
+                        <p id="levelCountCapitan">info nv</p>
+                        <div>
+                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
+                            <span id="costeCapitan">coste</span>
+                        </div>
+                    </section>
+                </div>
+                <div>
+                    <h1>Reliquias</h1>
+                    <section class="informacion">
+                        <p id="levelCountCapitan">info nv</p>
+                        <div>
+                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
+                            <span id="costeCapitan">coste</span>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+        </section>
+       
+        <!-- Seccion 2 -->
+
+
+
+
+
+        <section class="displayMonedas">
+            <img src="img/nivel 1/coin1.png">
+            <article id="informacionMoneda1">
+                <p>Monedas/s: </p>
+                <p>Tier: </p>
+            </article>
+        </section>
+        <section class="displayMejoras">
+            <h2>¡Mejora la produccion de monedas!</h2>
+            <aside>
+                <div class="contenedorMejoras">
+                    <h1>Arma</h1>
+                    <section class="informacion">
+                        <p id="levelCountArma">info nv</p>
+                        <div>
+                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
+                            <span id="costeArma">coste</span>
+                        </div>
+                    </section>
+                </div>
+                <div class="contenedorMejoras">
+                    <h1>Soldado</h1>
+                    <section class="informacion">
+                        <p id="levelCountSoldado">info nv</p>
+                        <div>
+                            <img src="img/nivel 1/coin1.png" class="monedaPrecio" alt="nivel 1/coin1.png"></img>
+                            <span id="costeSoldado">coste</span>
+                        </div>
+                    </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +5</div>
+                </div>
+                <div class="contenedorMejoras">
                     <h1>Sargento</h1>
                     <section class="informacion">
                         <p id="levelCountSargento">info nv</p>
@@ -180,7 +188,7 @@
                         </div>
                     </section>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Capitán</h1>
                     <section class="informacion">
                         <p id="levelCountCapitan">info nv</p>
@@ -247,7 +255,7 @@
         <section class="displayMejoras">
             <h2>¡Mejora la produccion de monedas!</h2>
             <aside>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Arma</h1>
                     <section class="informacion">
                         <p id="levelCountArma">info nv</p>
@@ -257,7 +265,7 @@
                         </div>
                     </section>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Soldado</h1>
                     <section class="informacion">
                         <p id="levelCountSoldado">info nv</p>
@@ -266,8 +274,9 @@
                             <span id="costeSoldado">coste</span>
                         </div>
                     </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +5</div>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Sargento</h1>
                     <section class="informacion">
                         <p id="levelCountSargento">info nv</p>
@@ -277,7 +286,7 @@
                         </div>
                     </section>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Capitán</h1>
                     <section class="informacion">
                         <p id="levelCountCapitan">info nv</p>
@@ -344,7 +353,7 @@
         <section class="displayMejoras">
             <h2>¡Mejora la produccion de monedas!</h2>
             <aside>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Arma</h1>
                     <section class="informacion">
                         <p id="levelCountArma">info nv</p>
@@ -354,7 +363,7 @@
                         </div>
                     </section>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Soldado</h1>
                     <section class="informacion">
                         <p id="levelCountSoldado">info nv</p>
@@ -363,8 +372,9 @@
                             <span id="costeSoldado">coste</span>
                         </div>
                     </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +5</div>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Sargento</h1>
                     <section class="informacion">
                         <p id="levelCountSargento">info nv</p>
@@ -374,7 +384,7 @@
                         </div>
                     </section>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Capitán</h1>
                     <section class="informacion">
                         <p id="levelCountCapitan">info nv</p>
@@ -441,7 +451,7 @@
         <section class="displayMejoras">
             <h2>¡Mejora la produccion de monedas!</h2>
             <aside>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Arma</h1>
                     <section class="informacion">
                         <p id="levelCountArma">info nv</p>
@@ -451,7 +461,7 @@
                         </div>
                     </section>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Soldado</h1>
                     <section class="informacion">
                         <p id="levelCountSoldado">info nv</p>
@@ -460,8 +470,9 @@
                             <span id="costeSoldado">coste</span>
                         </div>
                     </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +5</div>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Sargento</h1>
                     <section class="informacion">
                         <p id="levelCountSargento">info nv</p>
@@ -471,7 +482,7 @@
                         </div>
                     </section>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Capitán</h1>
                     <section class="informacion">
                         <p id="levelCountCapitan">info nv</p>
@@ -538,7 +549,7 @@
         <section class="displayMejoras">
             <h2>¡Mejora la produccion de monedas!</h2>
             <aside>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Arma</h1>
                     <section class="informacion">
                         <p id="levelCountArma">info nv</p>
@@ -547,8 +558,9 @@
                             <span id="costeArma">coste</span>
                         </div>
                     </section>
+                    <div class="cuadroTexto">Incrementa el valor de tu click +1</div>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Soldado</h1>
                     <section class="informacion">
                         <p id="levelCountSoldado">info nv</p>
@@ -557,8 +569,9 @@
                             <span id="costeSoldado">coste</span>
                         </div>
                     </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +1</div>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Sargento</h1>
                     <section class="informacion">
                         <p id="levelCountSargento">info nv</p>
@@ -568,7 +581,7 @@
                         </div>
                     </section>
                 </div>
-                <div>
+                <div class="contenedorMejoras">
                     <h1>Capitán</h1>
                     <section class="informacion">
                         <p id="levelCountCapitan">info nv</p>
@@ -577,6 +590,8 @@
                             <span id="costeCapitan">coste</span>
                         </div>
                     </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +3</div>
+
                 </div>
             </aside>
         </section>

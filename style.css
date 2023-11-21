@@ -21,8 +21,6 @@ header {
     width: 500px ;
     height: 50px;
     border-bottom: 1px solid var(--seleccion);
-    position: sticky;
-    top: 0;
 }
 #preguntas{
     height: 40px;
@@ -118,6 +116,10 @@ main{
 
 /*Columna central (Mejoras)*/
 .displayMejoras{
+    /* visibility: hidden;
+    height: 0;
+    overflow: hidden;
+     */
     background-color: var(--principal);
     border-radius: 0px 8px 8px 0px;
     padding: 18px;
@@ -131,14 +133,14 @@ main{
     flex-wrap: wrap;
     margin-top: -20px;
 }
-.displayMejoras div{
+.contenedorMejoras{
+    position: relative;
     display: flex;
     flex:1;
     flex-direction: column;
     text-align: center;
     background-color: var(--secundario);
     padding: 8px;
-    height: 65px;
     margin-right: 10px;
     margin-top: 10px;
     border-radius: 10px;
@@ -147,23 +149,40 @@ main{
         scale: 1.2;
     }
 }
+
 .displayMejoras div h1{
     margin-top: 0px;
+    margin-bottom: 20px;
 }
+
 .informacion{
-    display: flex;
+    /*display: none;*/
+    position: relative;
     flex-direction: column;
     margin-top: -35px;
     justify-content: center;
-
+    height: 55px;
+}
+.informacion div span{
+    margin-top: -2px;
+}
+.cuadroTexto {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
+    margin-top: -18px;
+    color: white;
 }
 .informacion div{
+    position: relative;
     background: none;
-    margin-top: -20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 8px;
 }
 .monedaPrecio{
     width: 20px;
@@ -194,7 +213,6 @@ main{
     text-align: center;
     background-color: var(--secundario);
     padding: 8px;
-    height: 65px;
     margin-right: 10px;
     margin-top: 10px;
     border-radius: 10px;
@@ -207,6 +225,7 @@ main{
     margin-top: 0px;
 }
 .informacion div{
+    position: relative;
     background: none;
     margin-top: -20px;
     display: flex;
@@ -216,7 +235,6 @@ main{
 }
 /*Candados*/
 #mostrarCandado {
-    /* display: none; */
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -229,7 +247,6 @@ main{
     align-items: center;
     z-index: 2;
     grid-column: 1 / span 2;
-    grid-row: 2;
 }
 
 #imgCandado{

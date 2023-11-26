@@ -1,12 +1,13 @@
-// variables
-let multiplicador = 1;
-let intervalo=false;
-let contador = 0;
-let autoClicks = 0;
+// Variables
+let multiplicador =  1;
+let intervalo = false;
+let contador = parseInt(localStorage.getItem('contador')) || 0;
+let autoClicks =  0;
 let monedasXSegundo = 0;
-let tier = 1;
+let tier =  1;
+let clickado ='false';
 
-//niveles
+// Niveles
 let nivelArma = 1;
 let nivelSoldado = 1;
 let nivelSargento = 1;
@@ -16,7 +17,7 @@ let nivelPowerUps = 1;
 let nivelTalentos = 1;
 let nivelReliquias = 1;
 
-//Costes tropas
+// Costes tropas
 let costeArma = 10;
 let costeSoldado = 15;
 let costeSargento = 25;
@@ -25,11 +26,21 @@ let costeCapitan = 35;
 let costePowerUps = 10;
 let costeTalentos = 15;
 let costeReliquias = 20;
+let costeCandado = 1;
+
 
 //Declaracion de los elementos principales
 const monedaPrincipal = document.getElementById('monedaClickable');
 const objetosMejoras = document.getElementsByClassName('contenedorMejoras');
 const objetosTienda = document.getElementsByClassName('contenedorTienda');
+const mostrarCandado = document.getElementById('mostrarCandado');
+const costeCandadoVer = document.getElementById('costeCandado');
+const mostrarMonedas = document.getElementsByClassName('displayMonedas');
+const mostrarMejoras = document.getElementsByClassName('displayMejoras');
+const mostrarTienda = document.getElementsByClassName('displayTienda');
+const informacion = document.getElementById('preguntas');
+const informacionText = document.getElementsByClassName('cuadroTexto');
+const informacionObjetos = document.getElementsByClassName('informacion');
 
 //Declaracion de los inputs por pantalla primera columna
 const monedasSegundoGeneral = document.getElementById('displayMonedasSegundo');
@@ -73,17 +84,20 @@ costeTalentosVer.textContent = `${costeTalentos}`;
 lvlCountReliquias.textContent = `Nivel: ${nivelReliquias}`;
 costeReliquiasVer.textContent = `${costeReliquias}`;
 
-//Métodos
+//Método
+//Método para guardar la informacion
+// Métodos
+function guardarEnLocalStorage() {
+    localStorage.setItem('contador', contador);
+  }
+
+//Métodos para imprimir las monedas
 function imprimirMonedas(){
     monedasSegundoGeneral.innerHTML = `<strong>Monedas totales: ${Math.round(contador)} </strong>`; 
 }
 function imprimirMonedasSegundo(){
     monedasSegundoParcial.innerHTML = `<h4>Monedas/s:</h4> <br> <span>${monedasXSegundo}</span> <br> Tier: ${tier}`;
 }
-
-imprimirMonedas();
-imprimirMonedasSegundo();
-
 //Funcion autoclick
 function autoClick(){
     // Establecer el intervalo solo si no está en funcionamiento
@@ -95,13 +109,30 @@ function autoClick(){
             imprimirMonedas();
         //Gestion de unidades
         if(contador>=100){
-            monedaPrincipal.src = "img/nivel 1/1.png";
+            monedaPrincipal.src = "img/chatgpt_img/2 pila.png";
+            tier = 2;
+            imprimirMonedasSegundo();
+        }else if(contador>=1000){
+            monedaPrincipal.src = "img/chatgpt_img/3 pilasMas.png";
+            tier = 2;
+            imprimirMonedasSegundo();
+        }else if(contador>=10000){
+            monedaPrincipal.src = "img/chatgpt_img/4 bolsa.png";
+            tier = 2;
+            imprimirMonedasSegundo();
+        }else if(contador>=10000){
+            monedaPrincipal.src = "img/chatgpt_img/5 caldero.png";
             tier = 2;
             imprimirMonedasSegundo();
         }
+        guardarEnLocalStorage();
         }, 10);
     }
 }
+imprimirMonedas();
+imprimirMonedasSegundo();
+autoClick();
+
 // Método para contar el click
 monedaPrincipal.addEventListener('click', () => {  
     contador = contador + multiplicador;  
@@ -172,4 +203,44 @@ objetosMejoras[3].addEventListener('click', () => {
 
         autoClick();
     }
+});
+
+//Método para mostrar y ocultar el candado
+costeCandadoVer.textContent = `${costeCandado/1000}K`;
+for (i=1; i<mostrarTienda.length; i++) {
+    mostrarMonedas[i].style.visibility = 'hidden';
+    mostrarMejoras[i].style.visibility = 'hidden';
+    mostrarTienda[i].style.visibility = 'hidden';
+}
+mostrarCandado.addEventListener('click', () => {
+    if(contador>=costeCandado){
+        contador = contador - costeCandado;
+        imprimirMonedas();
+        mostrarCandado.style.display = 'none';
+        //Volvemos a hacer todas las tiendas visible
+        for (i=1; i<mostrarTienda.length; i++) {
+            mostrarMonedas[i].style.visibility = 'visible';
+            mostrarMejoras[i].style.visibility = 'visible';
+            mostrarTienda[i].style.visibility = 'visible';
+        }
+    }
+});
+
+//Método para mostrar la informacion de las cosas
+informacion.addEventListener('click', () => {
+    if(clickado==false){
+        for (i=0; i<informacionText.length; i++) {
+            informacionText[i].style.display = 'block';
+            informacionObjetos[i].style.display = 'none';
+        }
+      
+        clickado=true;
+    }else if(clickado==true){
+        for (i=0; i<informacionText.length; i++) {
+            informacionText[i].style.display = 'none';
+            informacionObjetos[i].style.display = 'block';
+        }
+        clickado=false;
+    }
+    
 });

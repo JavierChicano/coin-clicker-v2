@@ -6,6 +6,7 @@ let autoClicks =  0;
 let monedasXSegundo = 0;
 let tier =  1;
 let clickado ='false';
+let imagen = 1;
 
 // Niveles
 let nivelArma = 1;
@@ -26,7 +27,7 @@ let costeCapitan = 35;
 let costePowerUps = 10;
 let costeTalentos = 15;
 let costeReliquias = 20;
-let costeCandado = 1;
+let costeCandado = 1000;
 
 
 //Declaracion de los elementos principales
@@ -107,25 +108,26 @@ function autoClick(){
         intervalo = setInterval(() => {
             contador += autoClicks;
             imprimirMonedas();
-        //Gestion de unidades
-        if(contador>=100){
-            monedaPrincipal.src = "img/chatgpt_img/2 pila.png";
-            tier = 2;
+            //Gestion de unidades
+            if(contador>=100&&imagen==1){
+                monedaPrincipal.src = "img/chatgpt_img/2 pila.png";
+                tier = 2;
+                imagen = 2;
+            }else if(contador>=1000&&imagen==2){
+                monedaPrincipal.src = "img/chatgpt_img/3 pilasMas.png";
+                tier = 3;
+                imagen = 3;
+            }else if(contador>=10000&&imagen==3){
+                monedaPrincipal.src = "img/chatgpt_img/4 bolsa.png";
+                tier = 4;
+                imagen = 4;
+            }else if(contador>=10000&&imagen==4){
+                monedaPrincipal.src = "img/chatgpt_img/5 caldero.png";
+                tier = 5;
+                imagen = 5;
+            }
             imprimirMonedasSegundo();
-        }else if(contador>=1000){
-            monedaPrincipal.src = "img/chatgpt_img/3 pilasMas.png";
-            tier = 2;
-            imprimirMonedasSegundo();
-        }else if(contador>=10000){
-            monedaPrincipal.src = "img/chatgpt_img/4 bolsa.png";
-            tier = 2;
-            imprimirMonedasSegundo();
-        }else if(contador>=10000){
-            monedaPrincipal.src = "img/chatgpt_img/5 caldero.png";
-            tier = 2;
-            imprimirMonedasSegundo();
-        }
-        guardarEnLocalStorage();
+            guardarEnLocalStorage();
         }, 10);
     }
 }

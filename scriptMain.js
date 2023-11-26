@@ -110,19 +110,19 @@ function autoClick(){
             imprimirMonedas();
             //Gestion de unidades
             if(contador>=100&&imagen==1){
-                monedaPrincipal.src = "img/chatgpt_img/2 pila.png";
+                monedaPrincipal.src = "img/chatgpt_img/2_pila.png";
                 tier = 2;
                 imagen = 2;
             }else if(contador>=1000&&imagen==2){
-                monedaPrincipal.src = "img/chatgpt_img/3 pilasMas.png";
+                monedaPrincipal.src = "img/chatgpt_img/3_pilasMas.png";
                 tier = 3;
                 imagen = 3;
             }else if(contador>=10000&&imagen==3){
-                monedaPrincipal.src = "img/chatgpt_img/4 bolsa.png";
+                monedaPrincipal.src = "img/chatgpt_img/4_bolsa.png";
                 tier = 4;
                 imagen = 4;
-            }else if(contador>=10000&&imagen==4){
-                monedaPrincipal.src = "img/chatgpt_img/5 caldero.png";
+            }else if(contador>=100000&&imagen==4){
+                monedaPrincipal.src = "img/chatgpt_img/5_caldero.png";
                 tier = 5;
                 imagen = 5;
             }

@@ -5,7 +5,7 @@ let contador = parseInt(localStorage.getItem('contador')) || 0;
 let autoClicks =  0;
 let monedasXSegundo = 0;
 let tier =  1;
-let clickado ='false';
+let clickado = false;
 let imagen = 1;
 
 // Niveles
